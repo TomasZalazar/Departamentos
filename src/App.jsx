@@ -1,17 +1,21 @@
-import Nav from "./components/nav"
-import './App.css'
-import Footer from "./components/footer"
-import Galeria from "./components/galeria"
+import Nav from "./components/NavBar/NavBar";
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import CentralAv from "./components/CentralAv/CentralAv";
+import Inicio from "./components/Inicio/Inicio";
+import SanNicolas from "./components/SanNicolas/SanNicolas";
 
 function App() {
-
   return (
-    <>
-  
-    <Nav/>
-    <Galeria/>
-    </>
-  )
+    <BrowserRouter>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Inicio />} />
+        <Route path="/CentralAv" element={<CentralAv />} />
+        <Route path="/SanNicolas" element={<SanNicolas />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
