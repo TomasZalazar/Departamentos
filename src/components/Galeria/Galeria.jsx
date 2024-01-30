@@ -18,7 +18,7 @@ const Galeria = () => {
     ];
 
     return (
-        <div className="p-5 md:p-10 lg:p-20"> {/* Ajusta el padding según el tamaño de la pantalla */}
+        <div className="lg:w-[975px] m-auto p-5 md:p-10 lg:p-20"> {/* Ajusta el padding según el tamaño de la pantalla */}
             <ImageGallery
                 items={imagenes}
                 showPlayButton={false}
